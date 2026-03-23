@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricify - Smart Pricing for Shopkeepers</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">&#9878;</span> Pricify
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#search" class="nav-link">Search</a></li>
+        <li><a href="#trending" class="nav-link">Trending</a></li>
+        <li><a href="#" class="nav-link" id="myPriceListNav" onclick="scrollToPriceList(event)">My Price List</a></li>
+      </ul>
+      <div class="nav-auth" id="navAuth">
+        <a href="/auth.html" class="btn btn-outline btn-sm nav-login-btn" id="navLoginBtn">Login</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">For New Shopkeepers</span>
+        <h1 class="hero-title">
+          Know the <span class="gradient-text">Right Price</span> Before You Sell
+        </h1>
+        <p class="hero-subtitle">
+          New to the market? Don't worry about pricing anymore. See what other shops and
+          online platforms charge for any product. Set your selling price with confidence.
+        </p>
+        <div class="hero-actions">
+          <a href="#search" class="btn btn-primary btn-lg">
+            <span class="btn-icon">&#128269;</span> Find Product Prices
+          </a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">Amazon + Flipkart</span>
+            <span class="stat-label">Live Prices</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Instant</span>
+            <span class="stat-label">Profit Calculator</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Free</span>
+            <span class="stat-label">Price List & Print</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-1">
+          <div class="mini-chart">
+            <div class="bar" style="height:40%"></div>
+            <div class="bar" style="height:65%"></div>
+            <div class="bar bar-highlight" style="height:85%"></div>
+            <div class="bar" style="height:55%"></div>
+            <div class="bar" style="height:70%"></div>
+          </div>
+          <p class="hero-card-label">Market Prices</p>
+        </div>
+        <div class="hero-card hero-card-2">
+          <span class="hero-card-icon">&#9733;</span>
+          <p class="hero-card-value">&#8377;299</p>
+          <p class="hero-card-label">You Should Sell At</p>
+        </div>
+        <div class="hero-card hero-card-3">
+          <span class="hero-card-icon">&#128176;</span>
+          <p class="hero-card-value">&#8377;80</p>
+          <p class="hero-card-label">Your Profit / Item</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features Section ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why Pricify?</span>
+        <h2 class="section-title">Built for Shopkeepers Like You</h2>
+        <p class="section-subtitle">Simple tools to help you price right and earn more</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-blue">&#128270;</div>
+          <h3>Search Any Product</h3>
+          <p>Type any item name - shampoo, cold drink, chalk box, shoes - and instantly see what price it sells at online.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-green">&#128200;</div>
+          <h3>See Market Prices</h3>
+          <p>Know the lowest, highest, and average selling price in the market. No more guessing what others charge.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-amber">&#9733;</div>
+          <h3>Get Selling Price</h3>
+          <p>We suggest the best price to sell at - not too high (lose customers) and not too low (lose profit).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-purple">&#128176;</div>
+          <h3>Calculate Your Profit</h3>
+          <p>Enter what you paid the vendor. We'll show exactly how much profit you'll make on each item you sell.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-red">&#128196;</div>
+          <h3>Save & Print Price List</h3>
+          <p>Build a price list of all your products and print it to stick in your shop. Your customers will see clear prices.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon feature-icon-teal">&#9889;</div>
+          <h3>Always Up-to-Date</h3>
+          <p>Prices change all the time. We fetch fresh data from Amazon & Flipkart every time you search.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How It Works ===== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Easy Steps</span>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Get the right selling price in 3 simple steps</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Search Your Product</h3>
+            <p>Type the name of any item you sell in your shop, like "Dove shampoo" or "notebook".</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>See Market Prices</h3>
+            <p>We check Amazon & Flipkart to show you what price this item sells at across the market.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Set Your Price</h3>
+            <p>Use our suggested price, calculate your profit, and add it to your shop's price list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Search Section ===== -->
+  <section class="search-section" id="search">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Find Prices</span>
+        <h2 class="section-title">What item do you want to price?</h2>
+        <p class="section-subtitle">Search any product to see its market price</p>
+      </div>
+
+      <!-- Category Quick Buttons -->
+      <div class="category-buttons" id="categoryButtons">
+        <button class="category-btn" data-category="groceries" onclick="showCategory('groceries')">
+          <span class="cat-icon">&#127822;</span> Groceries
+        </button>
+        <button class="category-btn" data-category="cosmetics" onclick="showCategory('cosmetics')">
+          <span class="cat-icon">&#128132;</span> Cosmetics
+        </button>
+        <button class="category-btn" data-category="stationery" onclick="showCategory('stationery')">
+          <span class="cat-icon">&#9999;</span> Stationery
+        </button>
+        <button class="category-btn" data-category="electronics" onclick="showCategory('electronics')">
+          <span class="cat-icon">&#128241;</span> Electronics
+        </button>
+        <button class="category-btn" data-category="clothing" onclick="showCategory('clothing')">
+          <span class="cat-icon">&#128085;</span> Clothing
+        </button>
+        <button class="category-btn" data-category="household" onclick="showCategory('household')">
+          <span class="cat-icon">&#127968;</span> Household
+        </button>
+      </div>
+
+      <!-- Category Suggestions (shown when a category is clicked) -->
+      <div id="categorySuggestions" class="category-suggestions hidden">
+        <p class="cat-suggest-label" id="catSuggestLabel">Popular in this category:</p>
+        <div class="cat-suggest-tags" id="catSuggestTags"></div>
+      </div>
+
+      <div class="search-box">
+        <form id="searchForm" class="search-form">
+          <div class="search-input-wrapper">
+            <span class="search-icon">&#128269;</span>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Type a product name (e.g., Dove shampoo, Parle-G, pen)"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button type="submit" id="searchBtn">
+            <span class="btn-text">Find Price</span>
+            <span class="btn-icon-arrow">&#10140;</span>
+          </button>
+        </form>
+        <div id="popularSearches" class="popular-searches">
+          <span class="popular-label">Quick search:</span>
+          <span class="popular-tag" onclick="quickSearch('headphones')">Headphones</span>
+          <span class="popular-tag" onclick="quickSearch('shampoo')">Shampoo</span>
+          <span class="popular-tag" onclick="quickSearch('cold drink')">Cold Drink</span>
+          <span class="popular-tag" onclick="quickSearch('shoes')">Shoes</span>
+          <span class="popular-tag" onclick="quickSearch('notebook')">Notebook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loading Spinner -->
+  <div id="loader" class="loader hidden">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <h3>Checking market prices...</h3>
+      <p>Getting live prices from Amazon & Flipkart</p>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div id="errorMsg" class="error-msg hidden"></div>
+
+  <!-- ===== Results Section ===== -->
+  <div id="resultsSection" class="hidden">
+
+    <!-- Market Price Cards -->
+    <section class="analysis-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Market Prices</span>
+          <h2 class="section-title" id="analysisTitle">Market Price for this Item</h2>
+          <p class="section-subtitle mrp-note">Note: Most shops sell below MRP. The prices below are actual selling prices, not MRP.</p>
+        </div>
+        <div class="analysis-cards">
+          <div class="analysis-card card-min">
+            <div class="analysis-card-header">
+              <span class="analysis-icon">&#8595;</span>
+              <span class="analysis-label">Cheapest Price</span>
+            </div>
+            <p class="analysis-value" id="minPrice">-</p>
+            <p class="analysis-note">Lowest selling price found</p>
+          </div>
+          <div class="analysis-card card-max">
+            <div class="analysis-card-header">
+              <span class="analysis-icon">&#8593;</span>
+              <span class="analysis-label">Highest Price</span>
+            </div>
+            <p class="analysis-value" id="maxPrice">-</p>
+            <p class="analysis-note">Most expensive option</p>
+          </div>
+          <div class="analysis-card card-avg">
+            <div class="analysis-card-header">
+              <span class="analysis-icon">&#8776;</span>
+              <span class="analysis-label">Average Price</span>
+            </div>
+            <p class="analysis-value" id="avgPrice">-</p>
+            <p class="analysis-note">What most sellers charge</p>
+          </div>
+          <div class="analysis-card card-suggested">
+            <div class="analysis-card-header">
+              <span class="analysis-icon">&#9733;</span>
+              <span class="analysis-label">You Should Sell At</span>
+            </div>
+            <p class="analysis-value" id="suggestedPrice">-</p>
+            <p class="analysis-note">Best price to attract customers & earn profit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profit Calculator -->
+    <section class="profit-section" id="profitSection">
+      <div class="container">
+        <div class="profit-calculator">
+          <div class="profit-header">
+            <h2>&#128176; Calculate Your Profit</h2>
+            <p>Enter how much you paid the vendor for this item</p>
+          </div>
+          <div class="profit-input-row">
+            <div class="profit-input-group">
+              <label for="buyingPrice">Your Buying Price (from vendor)</label>
+              <div class="profit-input-wrapper">
+                <span class="rupee-symbol">&#8377;</span>
+                <input type="number" id="buyingPrice" placeholder="e.g., 150" min="0" />
+              </div>
+            </div>
+            <button class="btn btn-primary" id="calcProfitBtn" onclick="calculateProfit()">Calculate Profit</button>
+          </div>
+          <div id="profitResult" class="profit-result hidden">
+            <div class="profit-cards">
+              <div class="profit-card">
+                <span class="profit-card-label">Selling Price</span>
+                <span class="profit-card-value" id="profitSellingPrice">-</span>
+              </div>
+              <div class="profit-card profit-card-minus">
+                <span class="profit-card-label">Your Cost</span>
+                <span class="profit-card-value" id="profitCost">-</span>
+              </div>
+              <div class="profit-card profit-card-equals">
+                <span class="profit-card-label">Profit per Item</span>
+                <span class="profit-card-value profit-amount" id="profitAmount">-</span>
+              </div>
+              <div class="profit-card profit-card-percent">
+                <span class="profit-card-label">Profit Margin</span>
+                <span class="profit-card-value" id="profitMargin">-</span>
+              </div>
+            </div>
+            <div id="profitAdvice" class="profit-advice"></div>
+            <button class="btn btn-outline add-to-list-btn" onclick="addToListFromProfit()">
+              &#128196; Add to My Price List
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Source Comparison -->
+    <section class="comparison-section">
+      <div class="container">
+        <h2 class="section-title">Price on Amazon vs Flipkart</h2>
+        <div id="sourceComparison" class="source-cards"></div>
+      </div>
+    </section>
+
+    <!-- Price Range Bar -->
+    <section class="range-section">
+      <div class="container">
+        <h2 class="section-title">Price Range in the Market</h2>
+        <div class="price-range-container">
+          <div class="range-bar">
+            <div id="rangeBar" class="range-fill"></div>
+            <div id="suggestedMarker" class="suggested-marker">
+              <span class="marker-tooltip" id="markerTooltip">Sell Here</span>
+            </div>
+          </div>
+          <div class="range-labels">
+            <span id="rangeMin" class="range-label-min">-</span>
+            <span id="rangeSuggested" class="range-label-suggested">Sell at: -</span>
+            <span id="rangeMax" class="range-label-max">-</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Listings -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-header">
+          <h2 class="section-title">Products Found Online</h2>
+          <div class="filter-btns">
+            <button class="filter-btn active" data-source="all">All</button>
+            <button class="filter-btn" data-source="amazon">Amazon</button>
+            <button class="filter-btn" data-source="flipkart">Flipkart</button>
+          </div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Saved Price List Section ===== -->
+  <section class="pricelist-section" id="priceListSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Your Shop</span>
+        <h2 class="section-title">&#128196; My Price List</h2>
+        <p class="section-subtitle">Products you've priced. Print this and stick it in your shop!</p>
+      </div>
+      <div id="priceListEmpty" class="pricelist-empty">
+        <p>No items added yet. Search for products and click "Add to My Price List" to build your list.</p>
+      </div>
+      <div id="priceListContent" class="hidden">
+        <div class="pricelist-actions">
+          <button class="btn btn-primary" onclick="printPriceList()">&#128424; Print Price List</button>
+          <button class="btn btn-outline btn-danger" onclick="clearPriceList()">Clear All</button>
+        </div>
+        <table class="pricelist-table" id="priceListTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Market Price</th>
+              <th>Your Cost</th>
+              <th>Selling Price</th>
+              <th>Profit</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="priceListBody">
+          </tbody>
+        </table>
+        <div class="pricelist-total">
+          <span>Total Items: <strong id="totalItems">0</strong></span>
+          <span>Avg Profit Margin: <strong id="avgMargin">0%</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Trending Products Section ===== -->
+  <section class="trending-section" id="trending">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Discover</span>
+        <h2 class="section-title">Trending Products</h2>
+        <p class="section-subtitle">Popular items with current market prices</p>
+      </div>
+    </div>
+    <div class="carousel-wrapper">
+      <div class="carousel-glow"></div>
+      <div class="carousel-track" id="carouselTrack"></div>
+      <div class="carousel-track carousel-track-reverse" id="carouselTrack2"></div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><span class="logo-icon">&#9878;</span> Pricify</h3>
+          <p>Helping new shopkeepers set the right price. No more guessing - know what the market charges and sell with confidence.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#search">Search Prices</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>We Check Prices From</h4>
+          <ul>
+            <li><a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">Amazon India</a></li>
+            <li><a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer">Flipkart</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Built With</h4>
+          <ul>
+            <li>Node.js & Express</li>
+            <li>MongoDB</li>
+            <li>Puppeteer</li>
+            <li>Vanilla JS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pricify - Smart Price Intelligence Platform. Helping shopkeepers make data-driven decisions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Print-only styles -->
+  <div id="printArea" class="print-only"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

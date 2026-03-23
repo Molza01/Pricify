@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricify - Login & Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-animated">
+    <div class="bg-gradient"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    <div class="floating-orb orb-4"></div>
+    <div class="floating-orb orb-5"></div>
+    <!-- Particle dots -->
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <!-- Main auth container -->
+  <div class="auth-wrapper">
+    <div class="auth-container" id="authContainer">
+
+      <!-- Glass card -->
+      <div class="glass-card">
+
+        <!-- Logo -->
+        <div class="auth-logo">
+          <span class="logo-icon">&#9878;</span>
+          <span class="logo-text">Pricify</span>
+        </div>
+
+        <!-- Tab switcher -->
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="loginTab" onclick="switchTab('login')">Login</button>
+          <button class="auth-tab" id="signupTab" onclick="switchTab('signup')">Sign Up</button>
+          <div class="tab-indicator" id="tabIndicator"></div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#9993;</span>
+              <input type="email" id="loginEmail" placeholder="Email address" required autocomplete="email" />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#128274;</span>
+              <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password" />
+              <button type="button" class="toggle-password" onclick="togglePassword('loginPassword', this)">
+                <span class="eye-icon">&#128065;</span>
+              </button>
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div id="loginError" class="auth-error hidden"></div>
+          <button type="submit" class="auth-btn" id="loginBtn">
+            <span class="btn-text">Login</span>
+            <span class="btn-loader hidden"></span>
+            <span class="btn-arrow">&#10140;</span>
+          </button>
+          <p class="auth-switch">
+            Don't have an account? <a href="#" onclick="switchTab('signup'); return false;">Sign up</a>
+          </p>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="auth-form hidden" onsubmit="handleSignup(event)">
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#128100;</span>
+              <input type="text" id="signupName" placeholder="Full name" required autocomplete="name" />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#9993;</span>
+              <input type="email" id="signupEmail" placeholder="Email address" required autocomplete="email" />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#127978;</span>
+              <input type="text" id="signupShop" placeholder="Shop name (optional)" autocomplete="organization" />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#128274;</span>
+              <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" required minlength="6" autocomplete="new-password" />
+              <button type="button" class="toggle-password" onclick="togglePassword('signupPassword', this)">
+                <span class="eye-icon">&#128065;</span>
+              </button>
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-wrapper">
+              <span class="input-icon">&#128274;</span>
+              <input type="password" id="signupConfirm" placeholder="Confirm password" required minlength="6" autocomplete="new-password" />
+              <span class="input-focus-line"></span>
+            </div>
+          </div>
+          <div id="signupError" class="auth-error hidden"></div>
+          <button type="submit" class="auth-btn" id="signupBtn">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-loader hidden"></span>
+            <span class="btn-arrow">&#10140;</span>
+          </button>
+          <p class="auth-switch">
+            Already have an account? <a href="#" onclick="switchTab('login'); return false;">Login</a>
+          </p>
+        </form>
+
+        <!-- Water flowing animation at bottom -->
+        <div class="water-effect">
+          <div class="water-wave wave-1"></div>
+          <div class="water-wave wave-2"></div>
+          <div class="water-wave wave-3"></div>
+        </div>
+
+      </div><!-- /glass-card -->
+
+    </div><!-- /auth-container -->
+  </div><!-- /auth-wrapper -->
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
