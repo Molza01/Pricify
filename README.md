@@ -1,6 +1,5 @@
- ## Pricify - Smart Price Intelligence Platform
-                                                                                                                                                                   A full-stack web application that helps shopkeepers and small retailers make smarter pricing decisions by aggregating and analyzing product prices from major  
-  e-commerce platforms like Amazon and Flipkart in real-time.
+ ## Pricify - Smart Price Intelligence Platfor
+ A full-stack web application that helps shopkeepers and small retailers make smarter pricing decisions by aggregating and analyzing product prices from major e-commerce platforms like Amazon and Flipkart in real-time.
 
   ## What It Does
 
