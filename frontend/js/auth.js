@@ -1,5 +1,5 @@
 // ===== Auth Configuration =====
-const API_BASE = "/api/auth";
+const API_BASE = "https://pricify-h7hk.onrender.com/api/auth";
 
 // Redirect if already logged in
 if (localStorage.getItem("pricify_token")) {

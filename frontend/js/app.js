@@ -1,5 +1,5 @@
 // ===== Configuration =====
-const API_BASE = "/api";
+const API_BASE = "https://pricify-h7hk.onrender.com/api";
 
 // ===== Auth Guard =====
 function isLoggedIn() {
