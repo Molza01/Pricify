@@ -1,8 +1,8 @@
- **Pricify** - Smart Price Intelligence Platform
+ ## Pricify - Smart Price Intelligence Platform
                                                                                                                                                                    A full-stack web application that helps shopkeepers and small retailers make smarter pricing decisions by aggregating and analyzing product prices from major  
   e-commerce platforms like Amazon and Flipkart in real-time.
 
- ** What It Does**
+  ## What It Does
 
   Pricify scrapes live product prices from multiple online marketplaces, analyzes the data, and provides:
 
@@ -13,26 +13,17 @@
   - Trending products — see what others are searching for
   - User authentication — secure signup/login with JWT
 
-**  Tech Stack**
 
-  ┌────────────┬─────────────────────────────────┐
-  │   Layer    │           Technology            │
-  ├────────────┼─────────────────────────────────┤
-  │ Frontend   │ HTML, CSS, JavaScript (Vanilla) │
-  ├────────────┼─────────────────────────────────┤
-  │ Backend    │ Node.js, Express.js             │
-  ├────────────┼─────────────────────────────────┤
-  │ Database   │ MongoDB (Mongoose ODM)          │
-  ├────────────┼─────────────────────────────────┤
-  │ Scraping   │ Puppeteer (headless Chrome)     │
-  ├────────────┼─────────────────────────────────┤
-  │ Auth       │ JWT, bcryptjs                   │
-  ├────────────┼─────────────────────────────────┤
-  │ Deployment │ Render                          │
-  └────────────┴─────────────────────────────────┘
+  ## Tech Stack
 
+- **Frontend:** HTML, CSS, JavaScript (Vanilla)  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB (Mongoose ODM)  
+- **Web Scraping:** Puppeteer (Headless Chrome)  
+- **Authentication:** JWT, bcryptjs  
+- **Deployment:** Render  
 
-**  Local Setup**
+## Local Setup
 
   Prerequisites
 
@@ -63,6 +54,6 @@
 
   5. Navigate to http://localhost:3000
 
- ** Live Demo**
+ ##Live Demo
 
   The Site is live at -  https://pricify-h7hk.onrender.com
